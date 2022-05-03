@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Hello {{ name }}</h1>
+    </div>
+
+    <script>
+        /*
+        Estado não reativo: alteração do script nao remete na estrutura 'exemplo só com js e html'
+        var name = 'Cataline'
+        var title = document.querySelector('#app h1')
+        title.innerHTML = name
+        */
+        
+        // Estado = 'dados da aplicação'
+        // Reatividade = ação no qual a mudança de um estado interfere na estrutura do app
+        var app = Vue.createApp({
+            data(){
+                return {
+                    name: 'Cataline'
+                }
+            }
+        })
+
+        var vm = app.mount('#app')
+    </script>
+</body>
+</html>

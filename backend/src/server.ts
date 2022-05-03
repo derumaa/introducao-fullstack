@@ -50,7 +50,7 @@ app.put('/users/:id', (request, response) => {
     const userIndex = users.findIndex((user) => user.id === id)
     // const userIndex = users.findIndex(
     //     function (user){
-    //         return user.id = id
+    //         return user.id === id
     //     })
 
     //se o usuario não existe, retorna erro
